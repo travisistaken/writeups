@@ -1,0 +1,41 @@
+/* ── writeups.travisteo.com ── */
+
+.wu-header {
+  background:var(--bg2);
+  border-bottom:1px solid var(--border);
+  padding:100px 48px 48px;
+}
+.wu-header-inner { max-width:1060px; margin:0 auto; }
+.wu-eyebrow  { font-family:var(--mono); font-size:10px; color:var(--accent); letter-spacing:3px; text-transform:uppercase; margin-bottom:12px; opacity:0; animation:fadeUp 0.5s forwards 0.1s; }
+.wu-headline { font-size:clamp(32px,5vw,54px); font-weight:700; letter-spacing:-1px; margin-bottom:10px; color:var(--text); opacity:0; animation:fadeUp 0.5s forwards 0.25s; }
+.wu-subhead  { font-size:15px; color:var(--text2); line-height:1.7; max-width:560px; opacity:0; animation:fadeUp 0.5s forwards 0.4s; }
+
+.wu-body { max-width:1060px; margin:0 auto; padding:48px; }
+
+.wu-ext-links { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:40px; }
+.wu-ext-link {
+  display:flex; align-items:center; gap:8px;
+  padding:10px 18px; background:var(--card); border:1px solid var(--border);
+  font-family:var(--mono); font-size:11px; color:var(--accent);
+  text-decoration:none; transition:all 0.2s;
+}
+.wu-ext-link:hover { border-color:var(--accent); background:rgba(122,162,247,0.08); }
+
+.wu-full-card {
+  background:var(--card);
+  border:1px solid var(--border);
+  padding:28px;
+  margin-bottom:16px;
+  transition:border-color 0.2s,transform 0.2s;
+}
+.wu-full-card:hover { border-color:var(--accent); transform:translateY(-2px); }
+.wu-card-header { display:flex; align-items:flex-start; justify-content:space-between; gap:16px; margin-bottom:14px; flex-wrap:wrap; }
+.wu-card-badges { display:flex; gap:6px; flex-wrap:wrap; }
+.wu-card-date   { font-family:var(--mono); font-size:10px; color:var(--muted); }
+.wu-card-title  { font-size:17px; font-weight:700; margin-bottom:8px; color:var(--text); }
+.wu-card-body   { font-size:14px; color:var(--text2); line-height:1.75; margin-bottom:12px; }
+
+@media (max-width:860px) {
+  .wu-header { padding:100px 20px 40px; }
+  .wu-body   { padding:32px 20px; }
+}

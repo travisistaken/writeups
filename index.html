@@ -1,14 +1,93 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Travis - Blog</title>
-  <meta http-equiv="X-Frame-Options" content="DENY">
+  <title>Travis Teo — Writeups</title>
+  <meta name="description" content="Lab notes, event recaps, and course writeups by Travis Teo — HackTheBox, TryHackMe, OverTheWire, and more.">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <link rel="stylesheet" href="css/shared.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>Work In Progress...</h1>
+
+  <div class="site-net">
+    <a href="https://travisteo.com"           class="sn-link">travisteo.com</a>
+    <a href="https://portfolio.travisteo.com"  class="sn-link">portfolio</a>
+    <a href="https://projects.travisteo.com"   class="sn-link">projects</a>
+    <a href="https://resume.travisteo.com"     class="sn-link">resume</a>
+    <a href="https://writeups.travisteo.com"   class="sn-link current">writeups</a>
+    <a href="https://contact.travisteo.com"    class="sn-link">contact</a>
+  </div>
+
+  <nav class="main-nav">
+    <a href="https://travisteo.com" class="nav-logo">Travis Teo</a>
+    <ul class="nav-links" id="nav-links"></ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="page">
+
+    <div class="wu-header">
+      <div class="wu-header-inner">
+        <div class="wu-eyebrow">// writeups.travisteo.com</div>
+        <h1 class="wu-headline">Writeups</h1>
+        <p class="wu-subhead">Lab notes, event recaps, and course summaries. Documenting the journey towards a career in cybersecurity.</p>
+      </div>
+    </div>
+
+    <div class="wu-body">
+
+      <!-- External writing links -->
+      <div class="wu-ext-links reveal">
+        <a href="https://medium.com/@travis-teo" target="_blank" rel="noopener noreferrer" class="wu-ext-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zm7.42 0c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
+          Medium — @travis-teo ↗
+        </a>
+        <a href="https://substack.com/@travisteo" target="_blank" rel="noopener noreferrer" class="wu-ext-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
+          Substack — @travisteo ↗
+        </a>
+      </div>
+
+      <!-- Filter -->
+      <div class="filters reveal" id="wu-filters">
+        <button class="filter-btn active" data-wf="all">All</button>
+        <button class="filter-btn" data-wf="lab">Lab</button>
+        <button class="filter-btn" data-wf="event">Event</button>
+        <button class="filter-btn" data-wf="course">Course</button>
+      </div>
+
+      <div id="wu-list" class="reveal"></div>
+      <div class="pagination reveal" id="wu-pag"></div>
+
+    </div>
+
+  </div><!-- /page -->
+
+  <footer class="main-footer">
+    <div class="footer-row">
+      <span style="font-weight:700;color:var(--accent);">Travis Teo</span>
+      <span class="footer-sep">—</span><span class="year"></span>
+      <span class="footer-sep">·</span><span style="color:var(--muted);">Singapore</span>
+    </div>
+    <div class="footer-sub">writeups.travisteo.com</div>
+  </footer>
+
+  <button class="go-top" id="go-top" aria-label="Back to top">↑</button>
+
+  <div class="modal-bg" id="modal-bg">
+    <div class="modal-box" id="modal-box">
+      <button class="modal-close" id="modal-close">✕</button>
+      <div class="modal-body" id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="js/shared.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
